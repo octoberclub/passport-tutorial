@@ -18,12 +18,44 @@ Install packages
 npm i
 ```
 
+### Set up mongo docker image
+
+```
+$ docker pull bitnami/mongodb:latest
+$ docker run -p27017:27017 --name mongodb  bitnami/mongodb:latest
+```
+
 ### Running the app
+
 
 To run the app (dev. mode)
 
 ```
 npm start
+```
+
+To add a user post a request to the user authentication server
+
+```
+Header
+Content-type: application/json
+
+Body:
+{
+  "user": {
+    "email": "something@whatever.com",
+    "password": "password"
+	}
+}
+
+```
+
+To use the login page redirect from your client app with the param to redirect back to
+
+e.g.
+
+```
+localhost:8000?redirect=localhost:8080/myapp.html
 ```
 
 ## Built With
