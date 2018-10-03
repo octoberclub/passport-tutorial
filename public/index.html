@@ -132,7 +132,7 @@ span.psw {
         return response.json();
       }
     )
-    .then(json => redirectWithToken('http://' + redirectUrl, json.user.token))
+    .then(json => redirectWithToken(redirectUrl, json.user.token))
     .catch(err => console.error(err.message) );
 
     function redirectWithToken(url, token) {
