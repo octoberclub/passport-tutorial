@@ -1,0 +1,12 @@
+<html>
+<head>
+<script>
+  document.cookie = "auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirectUrl = urlParams.get('redirect');
+  if(url) {
+    location.replace(url);
+  }
+</script>
+</head>
+</html>

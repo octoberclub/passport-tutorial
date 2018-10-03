@@ -138,7 +138,9 @@ span.psw {
     function redirectWithToken(url, token) {
       console.log(`save to local storage ${token}`);
       document.cookie = `auth=${token}`
-      location.replace(url);
+      if(url) {
+        location.replace(url);
+      }
     }
   }
 </script>
